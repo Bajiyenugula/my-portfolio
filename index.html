@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Backend Developer Portfolio</title>
+    <!-- Google Fonts: Montserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Three.js Library -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body { font-family: 'Montserrat', Arial, sans-serif; }
+        #canvas-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.3;
+        }
+        .hero {
+            background: none !important;
+        }
+    </style>
+</head>
+<body>
+    <!-- Three.js Canvas Container -->
+    <div id="canvas-container"></div>
+
+    <!-- Top Contact Bar -->
+    <div class="top-contact-bar d-none d-md-block">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <span>Welcome to my portfolio. Java Backend Developer with experience in microservices.</span>
+                </div>
+                <div class="col-md-4">
+                    <div class="top-contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+0012345678">(00) 123 456 789</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:example@example.com">example@example.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="#page-top">
+                <span>DEV</span><span>FOLIO</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars ms-1"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto py-4 py-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#resume">Resume</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" id="home">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7" data-aos="fade-right" data-aos-duration="1000">
+                    <h1 class="fw-bold" style="color: #333;">Baji Yenugula</h1>
+                    <p class="lead mb-4" style="color: #444;">Passionate B.Tech graduate with a strong foundation in Core Java, OOPs, and backend development. Skilled in building small-scale Java projects and currently learning Spring Boot for developing RESTful APIs. Eager to contribute as a Java Developer while continuously learning new technologies. Also comfortable with HTML, CSS, JavaScript, and React, offering a basic understanding of full-stack development.</p>
+                    <div class="d-flex mt-4">
+                        <a href="#projects" class="btn btn-primary me-3">VIEW PROJECTS</a>
+                        <a href="#contact" class="btn btn-light">CONTACT ME</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5" data-aos="fade-up">About Me</h2>
+            <div class="row align-items-center">
+                <div class="col-md-4 mb-4 mb-md-0" data-aos="fade-right">
+                    <div class="profile-image">
+                        <img src="images/profile.jpg" alt="Profile Picture" class="img-fluid rounded-circle">
+                    </div>
+                </div>
+                <div class="col-md-8" data-aos="fade-left">
+                    <h3>Hello, I'm <span class="text-primary">Baji Yenugula</span></h3>
+                    <p class="lead">Passionate B.Tech graduate with a strong foundation in Core Java, OOPs, and backend development. Skilled in building small-scale Java projects and currently learning Spring Boot for developing RESTful APIs. Eager to contribute as a Java Developer while continuously learning new technologies. Also comfortable with HTML, CSS, JavaScript, and React, offering a basic understanding of full-stack development.</p>
+                    <div class="d-flex mt-4">
+                        <a href="https://github.com/Bajiyenugula" class="social-icon me-3" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://linkedin.com/in/baji-yenugula" class="social-icon me-3" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="mailto:Manojyanugula@gmail.com" class="social-icon"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center mb-5" data-aos="fade-up">Technical Skills</h2>
+            
+            <div class="row">
+                <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="skill-category">
+                        <h3><i class="fab fa-java me-2"></i>Programming Languages</h3>
+                        <div class="skills-container">
+                            <div class="skill-item">Java</div>
+                            <div class="skill-item">C</div>
+                            <div class="skill-item">HTML/CSS</div>
+                            <div class="skill-item">JavaScript</div>
+                            <div class="skill-item">SQL</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="skill-category">
+                        <h3><i class="fas fa-code me-2"></i>Frameworks & Technologies</h3>
+                        <div class="skills-container">
+                            <div class="skill-item">Spring Boot</div>
+                            <div class="skill-item">React.js</div>
+                            <div class="skill-item">MySQL</div>
+                            <div class="skill-item">JUnit</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="skill-category">
+                        <h3><i class="fas fa-tools me-2"></i>Developer Tools</h3>
+                        <div class="skills-container">
+                            <div class="skill-item">VS Code</div>
+                            <div class="skill-item">Eclipse</div>
+                            <div class="skill-item">IntelliJ</div>
+                            <div class="skill-item">GitHub</div>
+                            <div class="skill-item">Google Cloud Platform</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5" data-aos="fade-up">Projects</h2>
+            
+            <div class="row">
+                <!-- Food Delivery Web Application -->
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card project-card h-100">
+                        <img src="images/food-delivery.jpg" class="card-img-top" alt="Food Delivery App">
+                        <div class="card-body">
+                            <h5 class="card-title">Food Delivery Web Application</h5>
+                            <p class="card-text">A full-stack food delivery application with React frontend and Spring Boot + MySQL backend.</p>
+                            <div class="tech-stack">
+                                <span class="badge rounded-pill bg-primary">React</span>
+                                <span class="badge rounded-pill bg-primary">Spring Boot</span>
+                                <span class="badge rounded-pill bg-primary">MySQL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Task Management System -->
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card project-card h-100">
+                        <img src="images/task-management.jpg" class="card-img-top" alt="Task Management System">
+                        <div class="card-body">
+                            <h5 class="card-title">Task Management System</h5>
+                            <p class="card-text">A full-stack task management application with user authentication, task CRUD operations, and real-time updates.</p>
+                            <div class="tech-stack">
+                                <span class="badge rounded-pill bg-primary">React</span>
+                                <span class="badge rounded-pill bg-primary">Spring Boot</span>
+                                <span class="badge rounded-pill bg-primary">MySQL</span>
+                                <span class="badge rounded-pill bg-primary">JWT</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Full-Stack CRUD Application -->
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card project-card h-100">
+                        <img src="images/crud-app.jpg" class="card-img-top" alt="CRUD Application">
+                        <div class="card-body">
+                            <h5 class="card-title">Full-Stack CRUD Application</h5>
+                            <p class="card-text">A complete CRUD application with React frontend, Spring Boot backend, and MySQL database.</p>
+                            <div class="tech-stack">
+                                <span class="badge rounded-pill bg-primary">React</span>
+                                <span class="badge rounded-pill bg-primary">Spring Boot</span>
+                                <span class="badge rounded-pill bg-primary">MySQL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technologies Section -->
+    <section id="technologies" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center mb-5" data-aos="fade-up">Technologies I Work With</h2>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="tech-grid" data-aos="fade-up">
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <i class="fab fa-java fa-3x"></i>
+                            </div>
+                            <h5>Java</h5>
+                        </div>
+                        
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <i class="fab fa-github fa-3x"></i>
+                            </div>
+                            <h5>Git</h5>
+                        </div>
+                        
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <i class="fas fa-database fa-3x"></i>
+                            </div>
+                            <h5>SQL</h5>
+                        </div>
+                        
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <i class="fas fa-leaf fa-3x"></i>
+                            </div>
+                            <h5>Spring</h5>
+                        </div>
+                        
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <i class="fab fa-docker fa-3x"></i>
+                            </div>
+                            <h5>Docker</h5>
+                        </div>
+                        
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <i class="fab fa-aws fa-3x"></i>
+                            </div>
+                            <h5>AWS</h5>
+                        </div>
+                        
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <i class="fas fa-server fa-3x"></i>
+                            </div>
+                            <h5>REST APIs</h5>
+                        </div>
+                        
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <i class="fas fa-sitemap fa-3x"></i>
+                            </div>
+                            <h5>Microservices</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center mb-5" data-aos="fade-up">Experience</h2>
+            
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <!-- Bharath Internship -->
+                    <div class="card experience-card mb-4" data-aos="fade-up">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <h4 class="mb-0">Full-Stack Developer Intern</h4>
+                                <span class="badge bg-primary">March 2023</span>
+                            </div>
+                            <h5 class="text-muted">Bharath Internship</h5>
+                            <p class="mb-4">Remote</p>
+                            <ul class="list-unstyled mb-4">
+                                <li><i class="fas fa-check-circle text-success me-2"></i>Developed a responsive portfolio website using React.js with modern UI/UX design</li>
+                                <li><i class="fas fa-check-circle text-success me-2"></i>Built a dynamic Weather App using OpenWeather API with real-time weather updates</li>
+                                <li><i class="fas fa-check-circle text-success me-2"></i>Created a Task Management System with Spring Boot backend and MySQL database</li>
+                                <li><i class="fas fa-check-circle text-success me-2"></i>Developed a Student Management System with user authentication and CRUD operations</li>
+                            </ul>
+                            <div class="tech-stack mb-3">
+                                <span class="badge rounded-pill bg-primary">React</span>
+                                <span class="badge rounded-pill bg-primary">Spring Boot</span>
+                                <span class="badge rounded-pill bg-primary">MySQL</span>
+                                <span class="badge rounded-pill bg-primary">REST APIs</span>
+                                <span class="badge rounded-pill bg-primary">External APIs</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Prodigy InfoTech -->
+                    <div class="card experience-card" data-aos="fade-up">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <h4 class="mb-0">Frontend Developer Intern</h4>
+                                <span class="badge bg-primary">June 2023</span>
+                            </div>
+                            <h5 class="text-muted">Prodigy InfoTech</h5>
+                            <p class="mb-4">Remote</p>
+                            <ul class="list-unstyled mb-4">
+                                <li><i class="fas fa-check-circle text-success me-2"></i>Designed and developed dynamic UI components using React.js</li>
+                                <li><i class="fas fa-check-circle text-success me-2"></i>Built interactive web applications with modern frontend technologies</li>
+                                <li><i class="fas fa-check-circle text-success me-2"></i>Utilized CSS and Bootstrap for responsive design</li>
+                                <li><i class="fas fa-check-circle text-success me-2"></i>Implemented API integration in React projects</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center mb-5" data-aos="fade-up">Achievements & Recognition</h2>
+            
+            <div class="row">
+                <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="achievement-card">
+                        <div class="achievement-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div class="achievement-content">
+                            <h4>20+</h4>
+                            <p>Projects Completed</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="achievement-card">
+                        <div class="achievement-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <div class="achievement-content">
+                            <h4>Best Code</h4>
+                            <p>Hackathon Winner</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="achievement-card">
+                        <div class="achievement-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <div class="achievement-content">
+                            <h4>10+</h4>
+                            <p>Innovation Solutions</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="achievement-card">
+                        <div class="achievement-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="achievement-content">
+                            <h4>100%</h4>
+                            <p>Client Satisfaction</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mt-4">
+                <div class="col-lg-10 mx-auto">
+                    <div class="achievement-timeline" data-aos="fade-up">
+                        <div class="achievement-item">
+                            <div class="achievement-date">2024</div>
+                            <div class="achievement-marker"></div>
+                            <div class="achievement-info">
+                                <h5>Java Developer of the Year</h5>
+                                <p>Recognized for exceptional contributions to backend architecture design and performance optimization.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="achievement-item">
+                            <div class="achievement-date">2023</div>
+                            <div class="achievement-marker"></div>
+                            <div class="achievement-info">
+                                <h5>Cloud Migration Award</h5>
+                                <p>Successfully led the migration of a legacy system to a modern cloud-native architecture.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="achievement-item">
+                            <div class="achievement-date">2022</div>
+                            <div class="achievement-marker"></div>
+                            <div class="achievement-info">
+                                <h5>Best Technical Article</h5>
+                                <p>Published an article on microservices design patterns that received industry recognition.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5" data-aos="fade-up">Certifications</h2>
+            
+            <div class="row">
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="certification-card">
+                        <div class="certificate-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <h4>Minor Project Certification</h4>
+                        <p class="text-muted">Unschool</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="certification-card">
+                        <div class="certificate-icon">
+                            <i class="fab fa-react"></i>
+                        </div>
+                        <h4>Major Project Certification in React</h4>
+                        <p class="text-muted">Unschool</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="certification-card">
+                        <div class="certificate-icon">
+                            <i class="fab fa-java"></i>
+                        </div>
+                        <h4>Java Certification</h4>
+                        <p class="text-muted">Udemy</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="certification-card">
+                        <div class="certificate-icon">
+                            <i class="fas fa-language"></i>
+                        </div>
+                        <h4>Preliminary English Test (PET)</h4>
+                        <p class="text-muted">Cambridge University</p>
+                        <p>Certified in "Preliminary English Test" conducted by Cambridge University in 2022</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Resume Section -->
+    <section id="resume" class="py-5 bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center" data-aos="fade-up">
+                    <h2 class="section-title mb-4">Download My Resume</h2>
+                    <p class="mb-4">Feel free to download my resume for a detailed overview of my skills and experience.</p>
+                    <a href="path/to/your/resume.pdf" class="btn btn-primary btn-lg" download>
+                        <i class="fas fa-download me-2"></i>Download Resume
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center mb-5" data-aos="fade-up">Education</h2>
+            
+            <div class="timeline" data-aos="fade-up">
+                <div class="timeline-item">
+                    <div class="timeline-badge">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h4>Bachelor of Technology in Food Technology</h4>
+                        <h5 class="text-muted">Vignan University</h5>
+                        <p class="time-period">2021 - 2025</p>
+                        <p>GPA: 7.86</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-badge">
+                        <i class="fas fa-school"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h4>Class XI– XII</h4>
+                        <h5 class="text-muted">Sri Chaitanya</h5>
+                        <p class="time-period">2019 - 2021</p>
+                        <p>Score: 914/1000</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-badge">
+                        <i class="fas fa-school"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h4>Class IX– X</h4>
+                        <h5 class="text-muted">Aditya E.M School</h5>
+                        <p class="time-period">2017 - 2018</p>
+                        <p>Score: 9.8/10</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5" data-aos="fade-up">Get In Touch</h2>
+            
+            <div class="row">
+                <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
+                    <div class="contact-info">
+                        <h3>Contact Information</h3>
+                        <p>Feel free to reach out to me for job opportunities, collaborations, or just to say hello!</p>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:Manojyanugula@gmail.com">Manojyanugula@gmail.com</a>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+916301963376">+91 6301963376</a>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Bhimavaram, Andhra Pradesh</span>
+                        </div>
+                        
+                        <div class="social-links mt-4">
+                            <a href="https://github.com/Bajiyenugula" class="social-icon me-3" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="https://linkedin.com/in/baji-yenugula" class="social-icon me-3" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6" data-aos="fade-left">
+                    <form action="https://formspree.io/f/xjkwkqar" method="POST" class="contact-form">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="subject" class="form-label">Subject</label>
+                            <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                        <div id="form-success" style="display:none;color:var(--primary);margin-top:1em;">Thank you! Your message has been sent.</div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-4 text-lg-start">
+                    <p class="mb-0">&copy; 2025 Your Name. All Rights Reserved.</p>
+                </div>
+                <div class="col-lg-4 text-lg-center">
+                    <a href="#page-top" class="btn btn-dark btn-social mx-2 back-to-top">
+                        <i class="fas fa-arrow-up"></i>
+                    </a>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <a href="#" class="link-dark text-decoration-none me-3">Privacy Policy</a>
+                    <a href="#" class="link-dark text-decoration-none">Terms of Use</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+        <button id="themeToggleBtn" class="btn btn-sm">
+            <i class="fas fa-moon"></i>
+        </button>
+    </div>
+
+    <!-- Scripts -->
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+
+    <!-- Update navbar with new section links -->
+    <script>
+        // Add this script at the end of the file, just before the closing body tag
+        document.addEventListener('DOMContentLoaded', function() {
+            const navbar = document.querySelector('#navbarResponsive ul');
+            
+            // Insert new menu items after Skills
+            const skillsMenuItem = document.querySelector('.nav-item a[href="#skills"]').parentNode;
+            
+            const newMenuItems = [
+                {name: 'Technologies', href: '#technologies'},
+                {name: 'Achievements', href: '#achievements'},
+                {name: 'Testimonials', href: '#testimonials'},
+                {name: 'Blog', href: '#blog'}
+            ];
+            
+            newMenuItems.forEach(item => {
+                const li = document.createElement('li');
+                li.className = 'nav-item';
+                li.innerHTML = `<a class="nav-link" href="${item.href}">${item.name}</a>`;
+                navbar.insertBefore(li, skillsMenuItem.nextSibling);
+            });
+        });
+    </script>
+</body>
+</html> 

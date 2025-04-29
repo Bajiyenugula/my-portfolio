@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <style>
+    .java-code { font-family: monospace; font-size: 12px; }
+    .glow { filter: drop-shadow(0px 0px 8px rgba(255, 255, 255, 0.5)); }
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
+    }
+    @keyframes rotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    @keyframes pulse {
+      0% { opacity: 0.7; }
+      50% { opacity: 1; }
+      100% { opacity: 0.7; }
+    }
+    .float-animation { animation: float 6s ease-in-out infinite; }
+    .float-animation-delayed { animation: float 6s ease-in-out infinite; animation-delay: 1s; }
+    .rotate-animation { animation: rotate 20s linear infinite; }
+    .pulse-animation { animation: pulse 3s ease-in-out infinite; }
+  </style>
+  
+  <!-- Background elements -->
+  <circle cx="400" cy="300" r="250" fill="#1565C0" opacity="0.1" class="pulse-animation"/>
+  <circle cx="400" cy="300" r="180" fill="#1E88E5" opacity="0.2" class="pulse-animation"/>
+  
+  <!-- Java Cup Logo -->
+  <g class="float-animation">
+    <path d="M400 120C430 120 450 140 450 170C450 200 430 220 400 220C370 220 350 200 350 170C350 140 370 120 400 120Z" fill="#F44336"/>
+    <path d="M380 220L420 220L430 300L370 300L380 220Z" fill="#F44336"/>
+    <path d="M350 300L450 300L450 320C450 330 410 340 400 340C390 340 350 330 350 320L350 300Z" fill="#F44336"/>
+    <path d="M390 150L410 150L410 200L390 200L390 150Z" fill="white"/>
+    <path d="M390 150L410 150L400 165L390 150Z" fill="white"/>
+  </g>
+  
+  <!-- Cloud Platform -->
+  <g class="float-animation-delayed">
+    <path d="M250 420C250 397.91 267.91 380 290 380H510C532.09 380 550 397.91 550 420V460C550 482.09 532.09 500 510 500H290C267.91 500 250 482.09 250 460V420Z" fill="#1E88E5" opacity="0.8"/>
+    <path d="M270 450C270 439.5 278.5 431 289 431H511C521.5 431 530 439.5 530 450V460C530 470.5 521.5 479 511 479H289C278.5 479 270 470.5 270 460V450Z" fill="#0D47A1"/>
+  </g>
+  
+  <!-- Gear symbols -->
+  <g transform="translate(300, 250)" class="rotate-animation glow">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M50 0C47.5 0 45.1 0.2 42.8 0.6L40.1 10.3C35.2 11.5 30.7 13.6 26.7 16.3L17.9 12C14.7 14.9 11.9 18.2 9.6 21.8L14.5 30.2C12.2 34.4 10.6 39 9.9 43.9L0.8 47.6C0.3 50 0 52.4 0 55C0 57.5 0.2 59.9 0.6 62.2L10.3 64.9C11.5 69.8 13.6 74.3 16.3 78.3L12 87.1C14.9 90.3 18.2 93.1 21.8 95.4L30.2 90.5C34.4 92.8 39 94.4 43.9 95.1L47.6 104.2C50 104.7 52.4 105 55 105C57.5 105 59.9 104.8 62.2 104.4L64.9 94.7C69.8 93.5 74.3 91.4 78.3 88.7L87.1 93C90.3 90.1 93.1 86.8 95.4 83.2L90.5 74.8C92.8 70.6 94.4 66 95.1 61.1L104.2 57.4C104.7 55 105 52.6 105 50C105 47.5 104.8 45.1 104.4 42.8L94.7 40.1C93.5 35.2 91.4 30.7 88.7 26.7L93 17.9C90.1 14.7 86.8 11.9 83.2 9.6L74.8 14.5C70.6 12.2 66 10.6 61.1 9.9L57.4 0.8C55 0.3 52.6 0 50 0ZM50 35C58.3 35 65 41.7 65 50C65 58.3 58.3 65 50 65C41.7 65 35 58.3 35 50C35 41.7 41.7 35 50 35Z" fill="white" opacity="0.15"/>
+  </g>
+  
+  <g transform="translate(450, 200)" class="rotate-animation glow">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M30 0C28.5 0 27.1 0.1 25.7 0.4L24.1 6.2C21.1 6.9 18.4 8.2 16 9.8L10.7 7.2C8.8 8.9 7.1 10.9 5.8 13.1L8.7 18.1C7.3 20.6 6.4 23.4 5.9 26.3L0.5 28.6C0.2 30 0 31.4 0 33C0 34.5 0.1 35.9 0.4 37.3L6.2 38.9C6.9 41.9 8.2 44.6 9.8 47L7.2 52.3C8.9 54.2 10.9 55.9 13.1 57.2L18.1 54.3C20.6 55.7 23.4 56.6 26.3 57.1L28.6 62.5C30 62.8 31.4 63 33 63C34.5 63 35.9 62.9 37.3 62.6L38.9 56.8C41.9 56.1 44.6 54.8 47 53.2L52.3 55.8C54.2 54.1 55.9 52.1 57.2 49.9L54.3 44.9C55.7 42.4 56.6 39.6 57.1 36.7L62.5 34.4C62.8 33 63 31.6 63 30C63 28.5 62.9 27.1 62.6 25.7L56.8 24.1C56.1 21.1 54.8 18.4 53.2 16L55.8 10.7C54.1 8.8 52.1 7.1 49.9 5.8L44.9 8.7C42.4 7.3 39.6 6.4 36.7 5.9L34.4 0.5C33 0.2 31.6 0 30 0ZM30 21C34.9 21 39 25.1 39 30C39 34.9 34.9 39 30 39C25.1 39 21 34.9 21 30C21 25.1 25.1 21 30 21Z" fill="white" opacity="0.15"/>
+  </g>
+  
+  <!-- Code blocks -->
+  <g class="float-animation glow">
+    <rect x="180" y="150" width="120" height="80" rx="5" fill="#212121" />
+    <text x="190" y="170" fill="#1E88E5" class="java-code">@RestController</text>
+    <text x="190" y="185" fill="#FFFFFF" class="java-code">public class API {</text>
+    <text x="190" y="200" fill="#4FC3F7" class="java-code">  @GetMapping("/")</text>
+    <text x="190" y="215" fill="#FFFFFF" class="java-code">  public String hi() {</text>
+    <text x="190" y="230" fill="#FFFFFF" class="java-code">  }</text>
+  </g>
+  
+  <g class="float-animation-delayed glow">
+    <rect x="500" y="180" width="140" height="70" rx="5" fill="#212121" />
+    <text x="510" y="200" fill="#4FC3F7" class="java-code">public interface</text>
+    <text x="510" y="215" fill="#1E88E5" class="java-code">UserService {</text>
+    <text x="510" y="230" fill="#FFFFFF" class="java-code">  User findById(</text>
+    <text x="510" y="245" fill="#FFA726" class="java-code">    Long id);</text>
+  </g>
+  
+  <!-- Spring logo abstract -->
+  <g transform="translate(150, 350)" class="float-animation">
+    <path d="M75,0 C116.421,0 150,33.579 150,75 C150,116.421 116.421,150 75,150 C33.579,150 0,116.421 0,75 C0,33.579 33.579,0 75,0 Z" fill="#6DB33F" opacity="0.5"/>
+    <path d="M41,55 C41,39.536 53.536,27 69,27 C84.464,27 97,39.536 97,55 C97,70.464 84.464,83 69,83 C53.536,83 41,70.464 41,55 Z" fill="#FFFFFF" opacity="0.2"/>
+    <path d="M70,55 L70,110" stroke="#FFFFFF" stroke-width="4" opacity="0.5"/>
+    <path d="M56,80 L84,80" stroke="#FFFFFF" stroke-width="4" opacity="0.5"/>
+    <path d="M45,95 L95,95" stroke="#FFFFFF" stroke-width="4" opacity="0.5"/>
+  </g>
+  
+  <!-- Database Icons -->
+  <g transform="translate(600, 300)" class="float-animation-delayed">
+    <path d="M0,15 C0,6.716 13.431,0 30,0 C46.569,0 60,6.716 60,15 L60,45 C60,53.284 46.569,60 30,60 C13.431,60 0,53.284 0,45 L0,15 Z" fill="#0288D1"/>
+    <path d="M0,15 C0,23.284 13.431,30 30,30 C46.569,30 60,23.284 60,15 C60,6.716 46.569,0 30,0 C13.431,0 0,6.716 0,15 Z" fill="#29B6F6"/>
+    <ellipse cx="30" cy="15" rx="25" ry="10" fill="#0288D1"/>
+    <path d="M5,30 L5,45 C5,50.5 16.5,55 30,55 C43.5,55 55,50.5 55,45 L55,30" stroke="#29B6F6" stroke-width="2"/>
+  </g>
+  
+  <!-- Microservices Connections -->
+  <g opacity="0.5">
+    <line x1="300" y1="300" x2="500" y2="320" stroke="#90CAF9" stroke-width="1.5" class="pulse-animation"/>
+    <line x1="500" y1="320" x2="580" y2="350" stroke="#90CAF9" stroke-width="1.5" class="pulse-animation"/>
+    <line x1="300" y1="300" x2="200" y2="400" stroke="#90CAF9" stroke-width="1.5" class="pulse-animation"/>
+    <line x1="500" y1="320" x2="400" y2="400" stroke="#90CAF9" stroke-width="1.5" class="pulse-animation"/>
+    
+    <circle cx="300" cy="300" r="5" fill="#29B6F6" class="pulse-animation"/>
+    <circle cx="500" cy="320" r="5" fill="#29B6F6" class="pulse-animation"/>
+    <circle cx="580" cy="350" r="5" fill="#29B6F6" class="pulse-animation"/>
+    <circle cx="200" cy="400" r="5" fill="#29B6F6" class="pulse-animation"/>
+    <circle cx="400" cy="400" r="5" fill="#29B6F6" class="pulse-animation"/>
+  </g>
+</svg> 
