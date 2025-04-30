@@ -4,16 +4,19 @@
 */
 
 :root {
-    --primary: #FFA500;
-    --primary-dark: #cc8400;
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --dark: #343a40;
+    --light: #f8f9fa;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
     --accent: #fff5e6;
-    --dark: #222;
-    --light: #fff;
     --light-gray: #f8f9fa;
     --light-white: #fafafa;
     --ultra-light: #f5f5f5;
     --gray: #757575;
-    --success: #4caf50;
     --transition: all 0.3s ease;
     --border-radius: 6px;
     --box-shadow: 0 2px 8px rgba(0,0,0,0.06);
@@ -39,13 +42,287 @@ body.dark-mode {
 
 /* Base Styles */
 body {
-    font-family: 'Montserrat', Arial, sans-serif;
-    color: var(--dark);
-    line-height: 1.7;
-    background-color: var(--light);
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: #333;
     overflow-x: hidden;
 }
 
+/* Responsive Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Responsive Typography */
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+@media (max-width: 768px) {
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.75rem; }
+    h3 { font-size: 1.5rem; }
+    h4 { font-size: 1.25rem; }
+    h5 { font-size: 1.1rem; }
+    h6 { font-size: 1rem; }
+}
+
+/* Responsive Navigation */
+.navbar {
+    padding: 1rem 0;
+    transition: all 0.3s ease;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 1.25rem;
+    }
+    
+    .navbar-nav {
+        padding: 1rem 0;
+    }
+    
+    .nav-link {
+        padding: 0.5rem 1rem;
+    }
+}
+
+/* Responsive Hero Section */
+.hero {
+    padding: 6rem 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 4rem 0;
+        text-align: center;
+    }
+    
+    .hero .btn {
+        display: block;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+}
+
+/* Responsive About Section */
+.profile-image {
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .profile-image {
+        max-width: 200px;
+        margin-bottom: 2rem;
+    }
+}
+
+/* Responsive Skills Section */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 1rem;
+}
+
+@media (max-width: 768px) {
+    .skills-container {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+}
+
+/* Responsive Projects Section */
+.project-card {
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+@media (max-width: 768px) {
+    .project-card {
+        margin-bottom: 2rem;
+    }
+}
+
+/* Responsive Technologies Section */
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .tech-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 1.5rem;
+    }
+}
+
+/* Responsive Experience Section */
+.experience-card {
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+    .experience-card {
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* Responsive Education Section */
+.timeline {
+    position: relative;
+    padding: 2rem 0;
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 3rem;
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+    .timeline-item {
+        padding-left: 2rem;
+    }
+}
+
+/* Responsive Contact Section */
+.contact-form {
+    padding: 2rem;
+    background: var(--light);
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .contact-form {
+        padding: 1.5rem;
+    }
+}
+
+/* Responsive Footer */
+.footer {
+    padding: 2rem 0;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 1.5rem 0;
+    }
+    
+    .footer .col-lg-4 {
+        margin-bottom: 1rem;
+    }
+}
+
+/* Responsive Images */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Responsive Buttons */
+.btn {
+    padding: 0.5rem 1.5rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .btn {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* Responsive Grid System */
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.col-md-6, .col-lg-4 {
+    padding: 0 15px;
+}
+
+/* Responsive Spacing */
+section {
+    padding: 4rem 0;
+}
+
+@media (max-width: 768px) {
+    section {
+        padding: 3rem 0;
+    }
+}
+
+/* Responsive Animations */
+[data-aos] {
+    pointer-events: none;
+}
+
+[data-aos].aos-animate {
+    pointer-events: auto;
+}
+
+/* Responsive Theme Toggle */
+.theme-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+@media (max-width: 768px) {
+    .theme-toggle {
+        bottom: 15px;
+        right: 15px;
+    }
+}
+
+/* Responsive Top Contact Bar */
+.top-contact-bar {
+    padding: 0.5rem 0;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .top-contact-bar {
+        display: none;
+    }
+}
+
+/* Responsive Social Icons */
+.social-icon {
+    font-size: 1.5rem;
+    margin: 0 0.5rem;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .social-icon {
+        font-size: 1.25rem;
+        margin: 0 0.25rem;
+    }
+}
+
+/* Base Styles */
 h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
     margin-bottom: 1rem;
@@ -187,17 +464,6 @@ section:nth-child(even) {
 }
 
 /* Hero Section */
-.hero {
-    position: relative;
-    padding: 80px 0 40px 0;
-    color: var(--light);
-    overflow: hidden;
-    background: var(--primary);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
 .hero::before {
     content: none;
 }
@@ -226,12 +492,6 @@ section:nth-child(even) {
 }
 
 /* About Section */
-.profile-image {
-    position: relative;
-    margin: 0 auto;
-    max-width: 300px;
-}
-
 .profile-image img {
     border: 5px solid white;
     box-shadow: var(--box-shadow);
@@ -248,19 +508,6 @@ section:nth-child(even) {
     top: -15px;
     left: -15px;
     z-index: -1;
-}
-
-.social-icon {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: var(--light-gray);
-    color: var(--primary);
-    font-size: 1.2rem;
-    transition: var(--transition);
 }
 
 .social-icon:hover {
@@ -290,12 +537,6 @@ section:nth-child(even) {
     align-items: center;
 }
 
-.skills-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
 .skill-item {
     background-color: rgba(0, 150, 136, 0.1);
     color: var(--primary);
@@ -313,20 +554,6 @@ section:nth-child(even) {
 }
 
 /* Projects Section */
-.project-card {
-    border-radius: var(--border-radius);
-    overflow: hidden;
-    box-shadow: var(--box-shadow);
-    margin-bottom: 30px;
-    transition: all 0.3s;
-    background-color: var(--light);
-}
-
-.project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-}
-
 .project-card .card-img-top {
     height: 200px;
     object-fit: cover;
@@ -369,13 +596,6 @@ section:nth-child(even) {
 }
 
 /* Technology Grid Section */
-.tech-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
-    margin-top: 20px;
-}
-
 .tech-item {
     background-color: var(--light);
     border-radius: var(--border-radius);
@@ -702,13 +922,6 @@ section:nth-child(even) {
 }
 
 /* Contact Form */
-.contact-form {
-    background-color: var(--light);
-    border-radius: var(--border-radius);
-    padding: 30px;
-    box-shadow: var(--box-shadow);
-}
-
 .form-control {
     border-radius: var(--border-radius);
     padding: 12px 15px;
@@ -756,13 +969,6 @@ section:nth-child(even) {
 }
 
 /* Theme Toggle */
-.theme-toggle {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    z-index: 999;
-}
-
 .theme-toggle button {
     width: 50px;
     height: 50px;
