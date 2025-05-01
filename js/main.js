@@ -216,30 +216,55 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Add typing effect to hero headline
-    const heroHeadline = document.querySelector('.hero h1');
-    
-    if (heroHeadline) {
-        const text = heroHeadline.textContent;
-        heroHeadline.innerHTML = '';
+    // Text Animation
+    const roles = [
+        "Frontend Developer",
+        "Backend Developer",
+        "Java Developer"
+    ];
+
+    let roleIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    let typingDelay = 100;
+    let deletingDelay = 50;
+    let pauseDelay = 2000;
+
+    function typeText() {
+        const currentRole = roles[roleIndex];
+        const typingElement = document.querySelector('.typing');
         
-        // Skip typing animation if user prefers reduced motion
-        if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-            let i = 0;
-            const typeWriter = function() {
-                if (i < text.length) {
-                    heroHeadline.innerHTML += text.charAt(i);
-                    i++;
-                    setTimeout(typeWriter, 100);
-                }
-            };
-            
-            setTimeout(typeWriter, 500);
+        if (isDeleting) {
+            // Delete text
+            typingElement.textContent = currentRole.substring(0, charIndex - 1);
+            charIndex--;
+            typingDelay = deletingDelay;
         } else {
-            // If user prefers reduced motion, just show text
-            heroHeadline.textContent = text;
+            // Type text
+            typingElement.textContent = currentRole.substring(0, charIndex + 1);
+            charIndex++;
+            typingDelay = 100;
         }
+
+        // Add cursor effect
+        typingElement.classList.add('typing-cursor');
+
+        if (!isDeleting && charIndex === currentRole.length) {
+            // Pause at the end of typing
+            isDeleting = true;
+            typingDelay = pauseDelay;
+        } else if (isDeleting && charIndex === 0) {
+            // Move to next role
+            isDeleting = false;
+            roleIndex = (roleIndex + 1) % roles.length;
+            typingDelay = 500;
+        }
+
+        setTimeout(typeText, typingDelay);
     }
+
+    // Initialize text animation when DOM is loaded
+    setTimeout(typeText, 1000);
 
     // Preload images for better performance
     function preloadImages() {
